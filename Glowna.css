@@ -1,0 +1,261 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* HEADER */
+        .header {
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* SECTIONS */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+        
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #e52e71;
+            text-align: center;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* MEDIA ELEMENTS */
+        .media-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .media-container:hover {
+            transform: translateY(-10px);
+        }
+        
+        .media-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .media-container iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        
+        .text-content {
+            padding: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        /* FINAL GREETINGS */
+        .zyczenia{
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #6e48aa, #9d50bb);
+            color: white;
+        }
+        
+        .zyczenia h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .zyczenia p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+        
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+        /* Styl dla pojedynczego zdjęcia */
+.single-image {
+    max-width: 800px; /* Możesz zmienić rozmiar */
+    margin: 0 auto;
+}
+
+.single-image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.single-image .text-content {
+    padding: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+/* Style dla podsekcji */
+.subsection {
+    margin-bottom: 4rem;
+}
+
+.subsection-title {
+    font-size: 2rem;
+    color: #e52e71;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Specjalny styl dla pojedynczego zdjęcia */
+.single-photo .media-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.single-photo img {
+    border: 15px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+/* Układ trzech zdjęć */
+.three-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.three-photos .media-container {
+    min-width: 100%;
+    margin: 0;
+}
+
+.three-photos .text-content h3 {
+    color: #e52e71;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Responsywność */
+@media (max-width: 900px) {
+    .three-photos {
+        grid-template-columns: 1fr;
+    }
+}
+/* SEKCJA KOMPAKTOWA */
+.single-photo-compact .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.single-photo-compact .media-container {
+    margin-bottom: 1.5rem;
+}
+
+.single-photo-compact img {
+    border-radius: 10px;
+    border: 8px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.single-photo-compact .text-content {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.single-photo-compact .text-content h3 {
+    color: #e52e71;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* SEKCJA Z ZDJĘCIEM MATIEGO */
+.single-photo-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.single-photo-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #e52e71;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-photo-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    background: #fff;
+    padding: 8px;
+}
+
+.hero-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.hero-photo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.hero-photo-container:hover .hero-photo {
+    transform: scale(1.03);
+}
